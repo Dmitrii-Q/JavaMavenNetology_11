@@ -3,8 +3,6 @@ package JavaMavenNetology.JavaMavenNetology_11.ticketManager;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class ManagerTest {
 
     @Test
@@ -26,8 +24,8 @@ class ManagerTest {
         manager.add(ticket_5);
         manager.add(ticket_6);
 
-        Ticket[] expected = { ticket_5, ticket_2, ticket_1, ticket_3, ticket_4 };
-        Ticket[] actual = manager.findAll("MSK","SPB");
+        Ticket[] expected = {ticket_5, ticket_2, ticket_1, ticket_3, ticket_4};
+        Ticket[] actual = manager.findAll("MSK", "SPB");
 
         Assertions.assertArrayEquals(expected, actual);
     }
@@ -51,8 +49,8 @@ class ManagerTest {
         manager.add(ticket_5);
         manager.add(ticket_6);
 
-        Ticket[] expected = { ticket_6 };
-        Ticket[] actual = manager.findAll("SPB","LA");
+        Ticket[] expected = {ticket_6};
+        Ticket[] actual = manager.findAll("SPB", "LA");
 
         Assertions.assertArrayEquals(expected, actual);
     }
@@ -77,7 +75,7 @@ class ManagerTest {
         manager.add(ticket_6);
 
         Ticket[] expected = {};
-        Ticket[] actual = manager.findAll("MSK","LA");
+        Ticket[] actual = manager.findAll("MSK", "LA");
 
         Assertions.assertArrayEquals(expected, actual);
     }
